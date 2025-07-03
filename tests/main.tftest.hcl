@@ -34,7 +34,7 @@ run "test_datadog_user_basic_creation" {
   }
 
   assert {
-    condition = can(datadog_user.users["testuser"])
+    condition = datadog_user.users["testuser"] != null
     error_message = "Should create datadog_user resource with key 'testuser'"
   }
 
