@@ -14,10 +14,4 @@ resource "datadog_user" "users" {
   name                 = each.value.name
   roles                = [for role in each.value.roles : local.roles[role]]
   send_user_invitation = each.value.send_user_invitation
-
-  # Avoids unnecessary resource recreation/drift when users alter their names.
-  # Such changes are non-critical and can be safely ignored by Terraform.
-  lifecycle {
-    ignore_changes = [name]
-  }
 }
