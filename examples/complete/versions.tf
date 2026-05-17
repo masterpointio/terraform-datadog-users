@@ -4,7 +4,7 @@ terraform {
   required_providers {
     datadog = {
       source  = "datadog/datadog"
-      version = "~> 3.14"
+      version = ">= 4.0"
     }
   }
 }
