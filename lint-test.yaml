@@ -1,0 +1,5 @@
+foo:  bar   
+baz:
+    - item1
+   - item2
+x : "missing_colon_space"
